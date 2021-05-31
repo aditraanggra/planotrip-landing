@@ -1,0 +1,39 @@
+{"featuredList":[
+    {    
+        "id":1,
+        "title":"kurang dari 1 km",
+        "desc" :"Kami menyediakan tempat yang terdekat dengan tempat wisata tujuan mu",
+        "icon" : "require('../assets/images/icon/icon-distance.svg')"
+    },
+    {    
+        "id":2,
+        "title":"Verifikasi Pemandu",
+        "desc" :"Pemandu kami akan memberikan pengalaman terbaik untuk perjalan wisata anda",
+        "icon" : "require('../assets/images/icon/icon-guide.svg')"
+    },
+    {    
+        "id":3,
+        "title":"multi payment",
+        "desc" :"Kami menyediakan banyak cara pembayaran untuk memudahkan anda",
+        "icon" : "require('../assets/images/icon/icon-payment.svg')"
+    },
+    {    
+        "id":4,
+        "title":"booking 24 jam",
+        "desc" :"Kami melayani anda tanpa ada batasan waktu, memungkinkan anda mendapatkan pelayanan maksimal setiap waktu",
+        "icon" : "require('../assets/images/icon/icon-twentyhour.svg')"
+    },
+    {    
+        "id":5,
+        "title":"fasilitas member",
+        "desc" :"Kami menyediakan banyak cara pembayaran untuk memudahkan anda",
+        "icon" : "require('../assets/images/icon/icon-member.svg')"
+    },
+    {    
+        "id":6,
+        "title":"garansi 100% uang kembali",
+        "desc" :"Kami melayani anda tanpa ada batasan waktu, memungkinkan anda mendapatkan pelayanan maksimal setiap waktu",
+        "icon" : "require('../assets/images/icon/icon-guarantee.svg')"
+    }   
+]
+}

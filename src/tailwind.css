@@ -1,3 +1,50 @@
 @tailwind base;
 @tailwind components;
+
+.btn {
+  @apply flex h-12 rounded-md w-auto font-sans px-9 items-center justify-center;
+}
+
+.nav-menu {
+  @apply font-body text-base text-textColor;
+}
+
+.navbar-menu {
+  @apply transform translate-x-full transition duration-300 flex-1 flex-col space-y-8  h-screen w-3/5 pt-20 pl-8 fixed right-0  top-0 bg-blue-50 z-20;
+}
+
 @tailwind utilities;
+
+.btn-primary {
+  @apply bg-primary text-white;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-white;
+}
+
+.btn-ios {
+  @apply bg-gray-400 text-textColor;
+}
+
+.btn:hover {
+  @apply shadow-md;
+}
+
+.btn-secondary:hover {
+  @apply bg-blue-500;
+}
+
+.nav-menu:hover {
+  @apply text-secondary;
+}
+
+#toggled-menu:checked + #menu {
+  @apply transition-transform duration-300 ease-in-out translate-x-0;
+}
+
+@screen md {
+  .navbar-menu {
+    @apply flex transform-none flex-row space-x-8 h-auto static justify-end pt-0 pl-0 items-center space-y-0 bg-transparent;
+  }
+}

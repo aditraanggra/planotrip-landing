@@ -1,8 +1,15 @@
 import React from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+
+import LandingPage from './pages/LandingPages'
 
 function App() {
   return (
-    <div className='flex justify-center item-center font-bold'>Hallo World</div>
+    <>
+      <Router>
+        <Route path='/' component={LandingPage}></Route>
+      </Router>
+    </>
   )
 }
 
