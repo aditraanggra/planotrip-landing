@@ -5,7 +5,7 @@ import LogoImage from '../assets/images/Logo.png'
 const Logo = (props) => {
   return (
     <Button {...props} type='link' href='./'>
-      <img src={LogoImage} style={{ height: 40 }} alt='Logo' />
+      <img {...props} src={LogoImage} style={{ height: 40 }} alt='Logo' />
     </Button>
   )
 }

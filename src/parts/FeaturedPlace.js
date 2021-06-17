@@ -30,14 +30,14 @@ function FeaturedPlace() {
   ]
 
   return (
-    <section id='featured-place' className='md:px-32 px-4 md:mt-36 mt-16'>
-      <div className='flex md:flex-row flex-col items-center'>
-        <h3 className='text-xl font-body font-medium text-textColor md:text-left text-center capitalize'>
+    <section id='featured-place' className='featured-wrapper'>
+      <div className='featured-wrapper--inner items-center'>
+        <h3 className='section-title text-textColor md:text-left text-center'>
           Tinggal Di Manapun
         </h3>
-        <div className='border border-secondary border-opacity-20 md:flex-1 md:ml-2 w-3/5 md:w-auto md:mt-0 mt-4 '></div>
+        <div className='featured-divider'></div>
       </div>
-      <div className='flex md:flex-row flex-col py-10 md:space-x-4'>
+      <div className='featured-wrapper--inner py-10 md:space-x-4'>
         {featuredPlaceImage.map((data) => (
           <div
             key={data.id}
@@ -49,9 +49,7 @@ function FeaturedPlace() {
               style={{ width: 280, height: 320 }}
               alt='featured'
             />
-            <p className='font-body text-lg capitalize text-textColor font-normal mt-2'>
-              {data.title}
-            </p>
+            <p className='featured-image--title'>{data.title}</p>
           </div>
         ))}
       </div>

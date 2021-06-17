@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Fade from 'react-reveal/Fade'
+
 import iconDistance from '../assets/images/icon/icon-distance.svg'
 import iconGuide from '../assets/images/icon/icon-guide.svg'
 import iconPayment from '../assets/images/icon/icon-payment.svg'
@@ -7,9 +9,10 @@ import iconServices from '../assets/images/icon/icon-twntyhour.svg'
 import iconMember from '../assets/images/icon/icon-member.svg'
 import iconGuarantee from '../assets/images/icon/icon-guarantee.svg'
 import travellerIllustration from '../assets/images/illustration.png'
+import FeaturedIcon from './FeaturedIcon'
 
-const Featured = () => {
-  //array feature list
+const Featured = ({ id }) => {
+  //data feature list
   const listFeatures = [
     {
       id: 1,
@@ -50,37 +53,33 @@ const Featured = () => {
   ]
 
   return (
-    <section id='feature' className='md:pt-32 pt-14'>
-      <h1 className='md:text-3xl text-xl font-bold font-body text-center capitalize text-textColor md:mb-20 mb-10'>
+    <section id={id} className='app-feature-wrapper'>
+      <h1 className='app-feature-title--big text-textColor'>
         kenapa harus plano<span className='text-secondary'>trip</span>?
       </h1>
-      <div className='flex md:flex-row flex-col-reverse'>
+      <div className='app-feature-wrapper--inner'>
         <div className='flex-1 h-auto md:pl-32 pl-4'>
-          <h3 className='text-xl font-body font-medium text-textColor md:text-left text-center capitalize'>
+          <h3 className='section-title text-textColor md:text-left text-center'>
             Efisienkan Waktu Menuju Wisata Favorit-Mu
           </h3>
-          <div className='w-14 border-2 border-secondary mt-4 md:mx-0 mx-auto'></div>
-          <p className='font-body text-base text-gray-400 mt-4 md:w-1/2 w-full md:text-left text-center'>
+          <div className='divider mt-4 mx-auto'></div>
+          <p className='app-feature-subtitle'>
             Kami menyediakan tempat yang terdekat dengan tempat wisata tujuan mu
           </p>
-          <div className='flex md:flex-wrap md:flex-row flex-col'>
+          <div className='app-feature-wrapper--list'>
             {listFeatures.map((data) => (
-              <div
-                key={data.id}
-                className='block md:w-48 w-4/5 md:text-left text-center h-auto md:mr-20 md:ml-0 mx-auto mt-10 md:justify-start'
-              >
-                <img src={data.icon} className='md:mx-0 mx-auto' alt='icon' />
-                <h4 className='font-body font-medium mb-2 mt-4 text-xl text-textColor capitalize'>
-                  {data.title}
-                </h4>
-                <p className='normal-case text-base font-body text-gray-400'>
-                  {data.desc}
-                </p>
-              </div>
+              <Fade duration={1500} bottom>
+                <FeaturedIcon
+                  key={data.id}
+                  icon={data.icon}
+                  title={data.title}
+                  desc={data.desc}
+                />
+              </Fade>
             ))}
           </div>
         </div>
-        <div className='flex-1 md:pr-20 md:pt-32 pt-0 pr-0 mb-6 h-full'>
+        <div className='app-feature-wrapper--illustration'>
           <img src={travellerIllustration} alt='traveller' />
         </div>
       </div>

@@ -2,11 +2,11 @@ import React from 'react'
 
 import Particles from 'react-particles-js'
 
-function ParticlesBg() {
+function ParticlesBg(props) {
   return (
     <>
       <Particles
-        className='w-screen h-screen'
+        {...props}
         params={{
           particles: {
             number: {

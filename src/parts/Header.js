@@ -6,7 +6,7 @@ import { Spin as Hamburger } from 'hamburger-react'
 
 const Header = () => {
   return (
-    <header className='md:container  md:mx-auto bg-white z-20'>
+    <header className='w-full bg-white z-20 fixed shadow'>
       <div className='flex flex-row justify-between md:px-20 px-4 items-center py-5'>
         <BrandLogo className='md:ml-5' />
         <label for='toggled-menu' className='md:hidden z-30'>
