@@ -1,7 +1,5 @@
 import React from 'react'
 
-import Button from '../components/Button'
-
 import { Link } from 'react-scroll'
 
 const Nav = [
@@ -39,9 +37,6 @@ const RightMenu = (props) => {
           </Link>
         </li>
       ))}
-      <li>
-        <Button className='btn btn-secondary'>Daftar</Button>
-      </li>
     </ul>
   )
 }
